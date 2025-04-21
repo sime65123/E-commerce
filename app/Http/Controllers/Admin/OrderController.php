@@ -60,7 +60,7 @@ class OrderController extends Controller
         return view('admin.orders.index', compact('orders'));
     }
 
-    public function show($orderId)
+    /*public function show($orderId)
     {
         $order = Order::where('user_id', Auth::user()->id)->where('id', $orderId)->first();
         if ($order) {
@@ -69,6 +69,26 @@ class OrderController extends Controller
             return redirect('admin/orders')->with('message', 'No Order Found');
         }
 
+    }*/
+    public function show($orderId)
+    {
+        $order = Order::find($orderId); // Trouver la commande par son ID
+
+        if (!$order) {
+            return redirect('admin/orders')->with('message', 'No Order Found');
+        }
+
+        // Vérifier le rôle de l'utilisateur actuellement authentifié
+        if (Auth::user()->role_as == '1') {
+            // Si c'est un administrateur, autorisez l'accès à toutes les commandes
+            return view('admin.orders.view', compact('order'));
+        } elseif (Auth::user()->id === $order->user_id) {
+            // Si c'est l'utilisateur qui a passé la commande, autorisez l'accès
+            return view('user.orders.view', compact('order'));
+        } else {
+            // Sinon, redirigez avec un message d'erreur
+            return redirect('admin/orders')->with('message', 'You are not authorized to view this order');
+        }
     }
 
     public function destroy(int $orderId)

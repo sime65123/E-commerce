@@ -82,18 +82,25 @@
 
 /* Category Start */
 .category-card{
-    border: 1px solid #ddd;
+    border: 2px solid #f08f28;
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
-    margin-bottom: 24px;
     background-color: #fff;
+    width: 300px; /* Adjust the width of the card according to your needs */
+    height: 300px; /* Adjust the height of the card according to your needs */
 }
 .category-card a{
     text-decoration: none;
 }
 .category-card .category-card-img{
+    flex: 1;
+    height: 300px;
     max-height: 260px;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
+}
+.category-card .category-card-img img{
+    width: 100%;
+    object-fit: cover;
 }
 .category-card .category-card-body{
     padding: 10px 16px;
@@ -110,8 +117,13 @@
 /* Product Card */
 .product-card{
     background-color: #fff;
-    border: 1px solid #ccc;
+    border: 2px solid #f08f28;
     margin-bottom: 24px;
+    width: 300px; /* Adjust the width of the card according to your needs */
+    height: 350px; /* Adjust the height of the card according to your needs */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .product-card a{
     text-decoration: none;
@@ -125,12 +137,14 @@
     font-size: 12px;
 }
 .product-card .product-card-img{
+    flex: 1;
     max-height: 260px;
     overflow: hidden;
     border-bottom: 1px solid #ccc;
 }
 .product-card .product-card-img img{
     width: 100%;
+    object-fit: cover;
 }
 .product-card .product-card-body{
     padding: 10px 10px;
@@ -145,7 +159,7 @@
     overflow: hidden;
 }
 .product-card .product-card-body .product-name{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #000;
     white-space: nowrap;

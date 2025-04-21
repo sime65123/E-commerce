@@ -12,7 +12,7 @@
                     @endif
                     <div class="p-4 shadow bg-white">
                             <img src="{{ asset('uploads/1.jpg') }}" alt="">
-                        <h4>Thanks You For Shopping With JAW-E-commerce</h4>
+                        <h4>Thanks You For Shopping With ITE-E-commerce</h4>
                         <a href="{{ url('collections') }}" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>

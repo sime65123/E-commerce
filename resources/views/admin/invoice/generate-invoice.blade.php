@@ -188,7 +188,7 @@
 
     <br>
     <p class="text-center">
-        Thank your for shopping with ITE - EXPERTS
+        Thank you for shopping with ITE - EXPERTS
     </p>
 
 </body>
