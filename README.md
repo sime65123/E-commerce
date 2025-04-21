@@ -12,7 +12,7 @@
     ### Étapes
     1. Clonez le dépôt :
         ```bash
-        git clone https://github.com/your-username/your-repository.git
+        git clone https://github.com/sime65123/E-commerce.git
         cd your-repository
         ```
 
